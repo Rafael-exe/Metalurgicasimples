@@ -1,0 +1,226 @@
+
+/* atalho pra fica facil mudar dps */
+:root {
+    --cor-fundo: #a5aaaf;
+    --cor-caixa: #a5aaaf;
+    --cor-texto: #222222;
+    --cor-principal:#a5aaaf ;
+    --cor-botao: #63736b;
+    --cor-botao-hover: #5f6c66;
+    --cor-borda: #dddddd;
+
+    /* Tamanhos */
+    --largura-caixa: 250px;
+    --altura-imagem: 180px;
+
+    --arredondamento: 15px;
+    --sombra: 0 4px 12px rgba(0, 0, 0, 0.10);
+    --sombra-hover: 0 8px 20px rgba(0, 0, 0, 0.16);
+    --transicao: 0.3s ease;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url("../imagens/istockphoto-534047395-1024x1024.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    color: var(--cor-texto);
+}
+
+.faixa {
+    text-align: center;
+    background-color: var(--cor-fundo);
+    padding: 25px;
+    padding-top: 10px;
+    border-radius: 0 0 25px 25px;
+    box-shadow: var(--sombra);
+}
+
+.title {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 38px;
+    padding: 15px;
+    color: var(--cor-texto);
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    padding: 12px 20px;
+    border-radius: var(--arredondamento);
+    transition: var(--transicao);
+}
+
+a:hover {
+    color: #000000;
+    background-color: var(--cor-hover);
+     box-shadow: var(--sombra);
+    transition: var(--transicao);
+}
+
+a:active {
+    color: red;
+    background-color: #84998a;
+     box-shadow: var(--sombra);
+    transition: var(--transicao);
+}
+
+a:visited {
+    color: inherit;
+     box-shadow: var(--sombra);
+    transition: var(--transicao);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+}
+
+/* COnfiguração geral */
+
+#produtos {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 25px;
+    padding: 30px;
+    align-items: stretch;
+}
+
+/* Area dos produts*/
+
+.caixap {
+    width: 100%;
+    min-width: 0;
+    background-color: var(--cor-caixa);
+    color: var(--cor-texto);
+    border: 1px solid var(--cor-borda);
+    border-radius: var(--arredondamento);
+    padding: 15px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: var(--sombra);
+    transition: var(--transicao);
+}
+
+.caixap:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-hover);
+}
+
+.caixap img {
+    width: 100%;
+    height: var(--altura-imagem);
+    object-fit: contain;
+    display: block;
+    border-radius: 8px;
+}
+
+.caixap h3 {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--cor-texto);
+}
+
+.caixap .preco {
+    font-size: 23px;
+    font-weight: bold;
+    color: var(--cor-botao);
+}
+
+.caixap button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--cor-botao);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: auto;
+    transition: var(--transicao);
+}
+
+.caixap button:hover {
+    background-color: var(--cor-botao-hover);
+}
+
+@media (max-width: 1000px) {
+    #produtos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 550px) {
+    #produtos {
+        grid-template-columns: 1fr;
+        padding: 15px;
+        gap: 20px;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+}
+
+#numero {
+    text-align: center;
+    padding: 25px;
+    background-color: var(--cor-fundo);
+    margin-top: 30px;
+    border-radius: 15px
+
+}
+
+.estilo {
+    color: #1f2325;
+    padding: 28px;
+      box-shadow: var(--sombra);
+      border-radius: 25px;
+}
+
+
+ #numero {
+    margin-left: auto;
+    margin-right: auto;
+ }
+
+#numero {
+    width: 400px;
+ }
+
+ #cont {
+    background-color:#29c452;
+    padding: 10px;
+    border-radius: 25px;
+    width: 200px ;
+    margin-left: auto;
+
+ }
+
+ #cont {
+  margin-right: auto;
+
+ }
+
+ .dist {
+   padding: 20px;
+ }
